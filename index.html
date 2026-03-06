@@ -1,63 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cute Finds Store</title>
 <link rel="stylesheet" href="style.css">
-  <!-- Google tag (gtag.js) -->
+
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MVX5W7LF0R"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-MVX5W7LF0R');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-MVX5W7LF0R');
 </script>
 </head>
 
 <body>
-
+<!-- Header -->
 <header>
-<h1>🌸 Cute Finds Store</h1>
-<p>Discover aesthetic products you'll love</p>
+  <h1>🌸 Cute Finds Store</h1>
+  <p>Your go-to place for aesthetic and practical products!</p>
 </header>
 
-<div class="container">
+<div class="main">
+  <!-- Sidebar / Navigation -->
+  <nav class="sidebar">
+    <ul>
+      <li><a href="#recent">Recent Items</a></li>
+      <li><a href="#tech">Tech Gadgets</a></li>
+      <li><a href="#study">Study Essentials</a></li>
+      <li><a href="#kitchen">Kitchen Finds</a></li>
+      <li><a href="#local">Pakistani Stores</a></li>
+      <li><a href="#amazon">Amazon US</a></li>
+    </ul>
+  </nav>
 
-<div class="product">
-<img src="images/earbuds.jpg">
-<h3>Wireless Earbuds</h3>
-<p>Crystal clear sound and long battery life.</p>
+  <!-- Content -->
+  <section class="content">
+    <!-- Recent Items Section -->
+    <h2 id="recent">🔥 Recent Items</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="images/earbuds.jpg" alt="Wireless Earbuds">
+        <h3>Wireless Earbuds</h3>
+        <p class="price">$25.99</p>
+        <p class="store">Amazon US</p>
+        <a href="YOUR_AMAZON_LINK" class="buy" onclick="trackClick('Wireless Earbuds','Amazon')">Buy Now</a>
+      </div>
 
-<a href="YOUR_AMAZON_LINK" 
-class="buy" 
-onclick="trackClick('earbuds')">
-View on Amazon
-</a>
+      <div class="product-card">
+        <img src="images/lamp.jpg" alt="Study Lamp">
+        <h3>Aesthetic Study Lamp</h3>
+        <p class="price">$18.50</p>
+        <p class="store">Amazon US</p>
+        <a href="YOUR_AMAZON_LINK" class="buy" onclick="trackClick('Study Lamp','Amazon')">Buy Now</a>
+      </div>
 
+      <div class="product-card">
+        <img src="images/notebook.jpg" alt="Notebook">
+        <h3>Premium Notebook</h3>
+        <p class="price">Rs 850</p>
+        <p class="store">Naheed</p>
+        <a href="YOUR_NAHEED_LINK" class="buy" onclick="trackClick('Premium Notebook','Naheed')">Buy Now</a>
+      </div>
+    </div>
+
+    <!-- Tech Gadgets Section -->
+    <h2 id="tech">💻 Tech Gadgets</h2>
+    <div class="product-grid">
+      <!-- Add more products here -->
+    </div>
+
+    <!-- Study Essentials Section -->
+    <h2 id="study">📚 Study Essentials</h2>
+    <div class="product-grid">
+      <!-- Add more products here -->
+    </div>
+
+    <!-- Kitchen Finds Section -->
+    <h2 id="kitchen">🍳 Kitchen Finds</h2>
+    <div class="product-grid">
+      <!-- Add more products here -->
+    </div>
+
+    <!-- Pakistani Stores Section -->
+    <h2 id="local">🇵🇰 Pakistani Stores</h2>
+    <div class="product-grid">
+      <!-- Add more local products here -->
+    </div>
+
+    <!-- Amazon US Section -->
+    <h2 id="amazon">🌎 Amazon US</h2>
+    <div class="product-grid">
+      <!-- Add more Amazon products here -->
+    </div>
+  </section>
 </div>
 
-<div class="product">
-
-<img src="images/lamp.jpg">
-<h3>Aesthetic Study Lamp</h3>
-<p>Perfect lighting for study desk.</p>
-
-<a href="YOUR_AMAZON_LINK" 
-class="buy"
-onclick="trackClick('lamp')">
-View on Amazon
-</a>
-
-</div>
-
-</div>
-
+<!-- Footer -->
 <footer>
-<p>As an Amazon Associate I earn from qualifying purchases.</p>
+  <p>As an Amazon Associate I earn from qualifying purchases.</p>
+  <p>All rights reserved © 2026 Cute Finds Store</p>
+  <p>Products from multiple stores are linked through their respective affiliate programs.</p>
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
