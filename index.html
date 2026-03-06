@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Your Daily Finds</title>
-  
+ 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet">
-  
+ 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MVX5W7LF0R"></script>
   <script>
@@ -18,7 +18,6 @@
     gtag('js', new Date());
     gtag('config', 'G-MVX5W7LF0R');
   </script>
-
   <style>
     :root {
       --bg: #fdf4f9;
@@ -30,13 +29,11 @@
       --shadow: 0 8px 25px rgba(255, 158, 193, 0.15);
       --transition: all 0.25s ease;
     }
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       font-family: 'Nunito', system-ui, sans-serif;
       background: var(--bg);
@@ -44,31 +41,26 @@
       line-height: 1.6;
       min-height: 100vh;
     }
-
     header {
       background: linear-gradient(135deg, #ffb6d9 0%, #ff9ec1 100%);
       color: white;
       text-align: center;
       padding: clamp(3rem, 8vw, 5rem) 1rem 3rem;
     }
-
     header h1 {
       font-family: 'Comfortaa', cursive;
       font-size: clamp(2.2rem, 7vw, 3.5rem);
       margin-bottom: 0.6rem;
     }
-
     header p {
       font-size: clamp(1.1rem, 4vw, 1.4rem);
       opacity: 0.95;
     }
-
     .container {
       max-width: 1400px;
       margin: 0 auto;
       padding: 0 1rem;
     }
-
     /* ── Navigation ── */
     nav {
       background: white;
@@ -78,7 +70,6 @@
       top: 0;
       z-index: 100;
     }
-
     nav ul {
       list-style: none;
       display: flex;
@@ -86,7 +77,6 @@
       justify-content: center;
       gap: 1.2rem 2rem;
     }
-
     nav a {
       text-decoration: none;
       color: var(--text);
@@ -95,13 +85,11 @@
       border-radius: 12px;
       transition: var(--transition);
     }
-
     nav a:hover,
     nav a.active {
       background: #fff0f5;
       color: var(--primary);
     }
-
     /* ── Products ── */
     .section-title {
       font-family: 'Comfortaa', cursive;
@@ -110,13 +98,11 @@
       margin: 2.5rem 0 1.8rem;
       color: var(--primary);
     }
-
     .products {
       display: grid;
       grid-template-columns: 1fr;
       gap: 1.8rem 1.5rem;
     }
-
     .product-card {
       background: var(--card);
       border-radius: 20px;
@@ -125,12 +111,10 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       text-align: center;
     }
-
     .product-card:hover {
       transform: translateY(-8px);
       box-shadow: 0 20px 40px rgba(255, 158, 193, 0.22);
     }
-
     .product-card img {
       width: 100%;
       height: auto;
@@ -138,23 +122,19 @@
       object-fit: cover;
       border-bottom: 1px solid #ffe4f0;
     }
-
     .product-info {
       padding: 1.4rem 1.2rem 1.8rem;
     }
-
     .product-info h3 {
       font-family: 'Comfortaa', cursive;
       font-size: clamp(1.25rem, 3.5vw, 1.45rem);
       margin-bottom: 0.5rem;
     }
-
     .brand {
       font-size: 0.95rem;
       color: #777;
       margin: 0.6rem 0 1.2rem;
     }
-
     .view-btn {
       display: inline-block;
       background: var(--primary);
@@ -167,13 +147,11 @@
       transition: var(--transition);
       touch-action: manipulation;
     }
-
     .view-btn:hover,
     .view-btn:focus {
       background: var(--primary-dark);
       transform: scale(1.04);
     }
-
     footer {
       background: #fff0f5;
       text-align: center;
@@ -183,38 +161,30 @@
       color: #666;
       border-top: 1px solid #ffe4f0;
     }
-
     footer p {
       margin: 0.6rem 0;
     }
-
     /* ── Responsive Adjustments ── */
-
     @media (min-width: 480px) {
       .products {
         grid-template-columns: repeat(2, 1fr);
       }
     }
-
     @media (min-width: 768px) {
       nav {
         padding: 1.2rem 0;
       }
-
       nav ul {
         gap: 2.5rem;
       }
-
       .products {
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
       }
-
       .container {
         padding: 0 2rem;
       }
     }
-
     @media (min-width: 1024px) {
       nav {
         position: fixed;
@@ -225,50 +195,41 @@
         padding-top: 140px;
         box-shadow: 2px 0 15px rgba(0,0,0,0.06);
       }
-
       nav ul {
         flex-direction: column;
         gap: 0.4rem;
         padding: 0 1rem;
       }
-
       nav a {
         padding: 1rem 1.5rem;
         border-radius: 0;
         border-left: 4px solid transparent;
       }
-
       nav a:hover,
       nav a.active {
         border-left-color: var(--primary);
         background: #fff0f5;
       }
-
       .container {
         max-width: 1200px;
         margin-left: 260px;
         padding: 0 2.5rem;
       }
-
       .products {
         grid-template-columns: repeat(3, 1fr);
       }
-
       header {
         padding-top: clamp(6rem, 10vw, 8rem);
       }
     }
-
     @media (min-width: 1280px) {
       .products {
         grid-template-columns: repeat(4, 1fr);
       }
-
       .container {
         max-width: 1400px;
       }
     }
-
     /* Prevent zoom issues on iOS */
     @media screen and (max-width: 767px) {
       .view-btn {
@@ -279,15 +240,13 @@
   </style>
 </head>
 <body>
-
   <header>
     <h1>Your Daily Finds</h1>
     <p>We help you discover beautiful & useful products every day</p>
   </header>
-
   <nav>
     <ul>
-      <li><a href="#" class="active">Trending Picks</a></li>
+      <li><a href="#">Trending Picks</a></li>
       <li><a href="#">Stationery & Study</a></li>
       <li><a href="#">Tech Gadgets</a></li>
       <li><a href="#">Room Decor</a></li>
@@ -295,14 +254,11 @@
       <li><a href="#">Cute Accessories</a></li>
     </ul>
   </nav>
-
   <div class="container">
     <h2 class="section-title">Trending This Week</h2>
-
     <div class="products">
-
       <!-- Product 1 -->
-      <div class="product-card">
+      <div class="product-card category-tech-gadgets trending">
         <img src="images/earbuds.jpg" alt="Wireless Earbuds">
         <div class="product-info">
           <h3>Wireless Earbuds</h3>
@@ -311,9 +267,8 @@
              onclick="trackClick('earbuds')">View on Store</a>
         </div>
       </div>
-
       <!-- Product 2 -->
-      <div class="product-card">
+      <div class="product-card category-stationery-and-study trending">
         <img src="images/lamp.jpg" alt="Study Lamp">
         <div class="product-info">
           <h3>Study Lamp</h3>
@@ -322,9 +277,8 @@
              onclick="trackClick('lamp')">View on Store</a>
         </div>
       </div>
-
       <!-- Product 3 -->
-      <div class="product-card">
+      <div class="product-card category-tech-gadgets trending">
         <img src="images/charger.jpg" alt="Portable Charger">
         <div class="product-info">
           <h3>Portable Charger</h3>
@@ -333,9 +287,8 @@
              onclick="trackClick('charger')">View on Store</a>
         </div>
       </div>
-
       <!-- Product 4 -->
-      <div class="product-card">
+      <div class="product-card category-tech-gadgets trending">
         <img src="images/mouse.jpg" alt="Ergonomic Mouse">
         <div class="product-info">
           <h3>Ergonomic Mouse</h3>
@@ -344,9 +297,8 @@
              onclick="trackClick('mouse')">View on Store</a>
         </div>
       </div>
-
       <!-- Product 5 -->
-      <div class="product-card">
+      <div class="product-card category-self-care-essentials trending">
         <img src="images/blender.jpg" alt="Kitchen Blender">
         <div class="product-info">
           <h3>Kitchen Blender</h3>
@@ -355,21 +307,78 @@
              onclick="trackClick('blender')">View on Store</a>
         </div>
       </div>
-
+      <!-- Product 6 (added for Room Decor) -->
+      <div class="product-card category-room-decor">
+        <img src="images/pillow.jpg" alt="Decorative Pillow">
+        <div class="product-info">
+          <h3>Decorative Pillow</h3>
+          <div class="brand">Home Comfort • Store F</div>
+          <a href="YOUR_LINK_PILLOW" class="view-btn"
+             onclick="trackClick('pillow')">View on Store</a>
+        </div>
+      </div>
+      <!-- Product 7 (added for Cute Accessories) -->
+      <div class="product-card category-cute-accessories">
+        <img src="images/keychain.jpg" alt="Cute Keychain">
+        <div class="product-info">
+          <h3>Cute Keychain</h3>
+          <div class="brand">Accessory Fun • Store G</div>
+          <a href="YOUR_LINK_KEYCHAIN" class="view-btn"
+             onclick="trackClick('keychain')">View on Store</a>
+        </div>
+      </div>
     </div>
   </div>
-
   <footer>
     <p>These products are not owned or sold by us. We’re just helping you find things we love! Product store buttons take you directly to the original store listing.</p>
     <p>© 2026 Your Daily Finds. All rights reserved</p>
   </footer>
-
   <script>
     function trackClick(item) {
       console.log('Clicked:', item);
       // gtag('event', 'affiliate_click', { 'item': item });
     }
-  </script>
 
+    document.addEventListener('DOMContentLoaded', function() {
+      const navLinks = document.querySelectorAll('nav a');
+      const sectionTitle = document.querySelector('.section-title');
+      const products = document.querySelectorAll('.product-card');
+
+      function showCategory(categorySlug, title) {
+        products.forEach(product => {
+          product.style.display = 'none';
+        });
+
+        let selector;
+        if (categorySlug === 'trending-picks') {
+          selector = '.trending';
+          sectionTitle.textContent = 'Trending This Week';
+        } else {
+          selector = `.category-${categorySlug}`;
+          sectionTitle.textContent = title;
+        }
+
+        document.querySelectorAll(selector).forEach(product => {
+          product.style.display = '';
+        });
+      }
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          navLinks.forEach(l => l.classList.remove('active'));
+          this.classList.add('active');
+          let categoryText = this.textContent;
+          let categorySlug = categoryText.toLowerCase().replace(/ & /g, '-and-').replace(/ /g, '-');
+          showCategory(categorySlug, categoryText);
+        });
+      });
+
+      // Initial setup
+      const trendingLink = navLinks[0];
+      trendingLink.classList.add('active');
+      showCategory('trending-picks', 'Trending Picks');
+    });
+  </script>
 </body>
 </html>
