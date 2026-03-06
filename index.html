@@ -1,78 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cute Finds | Aesthetic Shopping</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cute Finds Store 🌸</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MVX5W7LF0R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MVX5W7LF0R');
+  </script>
+
+  <style>
+    :root {
+      --bg: #fdf4f9;
+      --primary: #ff9ec1;
+      --primary-dark: #ff6fa5;
+      --accent: #a8d5e3;
+      --text: #4a2c3f;
+      --card: #ffffff;
+      --shadow: 0 8px 25px rgba(255, 158, 193, 0.15);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #ffb6d9 0%, #ff9ec1 100%);
+      color: white;
+      text-align: center;
+      padding: 5rem 1rem 4rem;
+      position: relative;
+    }
+
+    header h1 {
+      font-family: 'Comfortaa', cursive;
+      font-size: 3.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      opacity: 0.95;
+    }
+
+    .layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Sidebar Nav */
+    nav {
+      width: 240px;
+      background: white;
+      box-shadow: 2px 0 15px rgba(0,0,0,0.06);
+      position: fixed;
+      height: 100%;
+      overflow-y: auto;
+      padding-top: 120px; /* space for header */
+    }
+
+    nav ul {
+      list-style: none;
+    }
+
+    nav li {
+      padding: 1rem 1.8rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      display: block;
+      transition: all 0.25s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--primary);
+      background: #fff0f5;
+      border-left: 4px solid var(--primary);
+    }
+
+    /* Main content */
+    main {
+      flex: 1;
+      margin-left: 240px;
+      padding: 2.5rem 3rem;
+    }
+
+    .section-title {
+      font-family: 'Comfortaa', cursive;
+      font-size: 2.1rem;
+      margin: 2rem 0 1.5rem;
+      color: var(--primary);
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .product-card {
+      background: var(--card);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      position: relative;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(255, 158, 193, 0.25);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-bottom: 1px solid #ffe4f0;
+    }
+
+    .product-info {
+      padding: 1.5rem 1rem;
+    }
+
+    .product-info h3 {
+      font-family: 'Comfortaa', cursive;
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+
+    .price {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin: 0.4rem 0;
+    }
+
+    .brand {
+      font-size: 0.95rem;
+      color: #777;
+      margin-bottom: 1rem;
+    }
+
+    .buy-btn {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 0.9rem 1.8rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.25s;
+    }
+
+    .buy-btn:hover {
+      background: var(--primary-dark);
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: #fff0f5;
+      text-align: center;
+      padding: 2.5rem 1rem;
+      margin-top: 4rem;
+      font-size: 0.95rem;
+      color: #666;
+      border-top: 1px solid #ffe4f0;
+    }
+
+    @media (max-width: 900px) {
+      nav {
+        width: 200px;
+      }
+      main {
+        margin-left: 200px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .layout {
+        flex-direction: column;
+      }
+      nav {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding-top: 1rem;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      }
+      main {
+        margin-left: 0;
+        padding: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <header class="top-header">
-        <div class="logo">🌸 Cute Finds Store</div>
-        <div class="search-bar">
-            <input type="text" placeholder="Search aesthetic finds...">
+  <header>
+    <h1>🌸 Cute Finds Store</h1>
+    <p>Discover aesthetic products you'll love</p>
+  </header>
+
+  <div class="layout">
+    <!-- Sidebar Navigation -->
+    <nav>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Stationery & Study</a></li>
+        <li><a href="#">Tech Gadgets</a></li>
+        <li><a href="#">Room Decor</a></li>
+        <li><a href="#">Self-Care</a></li>
+        <li><a href="#">Kawaii Accessories</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <h2 class="section-title">Featured & Recent Finds</h2>
+
+      <div class="products">
+        <!-- Product Card Example 1 -->
+        <div class="product-card">
+          <img src="images/earbuds.jpg" alt="Wireless Earbuds">
+          <div class="product-info">
+            <h3>Wireless Earbuds</h3>
+            <div class="price">$39.99</div>
+            <div class="brand">Sound Blossom • Amazon</div>
+            <a href="YOUR_AMAZON_LINK_EARBUDS" class="buy-btn"
+               onclick="trackClick('earbuds')">View on Amazon</a>
+          </div>
         </div>
-    </header>
 
-    <div class="main-layout">
-        <nav class="sidebar">
-            <h3>Categories</h3>
-            <ul>
-                <li><a href="#" class="active">✨ Home Decor</a></li>
-                <li><a href="#">🎧 Tech & Gadgets</a></li>
-                <li><a href="#">📚 Stationery</a></li>
-                <li><a href="#">☁️ Lifestyle</a></li>
-            </ul>
-            <hr>
-            <h3>Our Stores</h3>
-            <ul>
-                <li><a href="#">Amazon Finds</a></li>
-                <li><a href="#">Etsy Favorites</a></li>
-            </ul>
-        </nav>
-
-        <main class="content">
-            <section class="hero-banner">
-                <h2>Recent Finds</h2>
-                <p>Handpicked treasures for your space.</p>
-            </section>
-
-            <div class="product-grid">
-                <div class="product-card">
-                    <div class="badge">Amazon</div>
-                    <img src="images/earbuds.jpg" alt="Earbuds">
-                    <div class="card-info">
-                        <span class="category-tag">Tech</span>
-                        <h3>Wireless Earbuds</h3>
-                        <p class="price">$29.99</p>
-                        <p class="description">Crystal clear sound and long battery life.</p>
-                        <a href="#" class="buy-btn">View on Amazon</a>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="badge">Amazon</div>
-                    <img src="images/lamp.jpg" alt="Lamp">
-                    <div class="card-info">
-                        <span class="category-tag">Study</span>
-                        <h3>Aesthetic Study Lamp</h3>
-                        <p class="price">$45.00</p>
-                        <p class="description">Perfect lighting for your study desk.</p>
-                        <a href="#" class="buy-btn">View on Amazon</a>
-                    </div>
-                </div>
-            </div>
-        </main>
-    </div>
-
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2026 Cute Finds Store. All rights reserved.</p>
-            <p class="disclaimer">As an Amazon Associate, I earn from qualifying purchases. This helps keep our aesthetic dreams alive!</p>
+        <!-- Product Card Example 2 -->
+        <div class="product-card">
+          <img src="images/lamp.jpg" alt="Aesthetic Study Lamp">
+          <div class="product-info">
+            <h3>Aesthetic Study Lamp</h3>
+            <div class="price">$24.99</div>
+            <div class="brand">Lumi Pastel • Amazon</div>
+            <a href="YOUR_AMAZON_LINK_LAMP" class="buy-btn"
+               onclick="trackClick('lamp')">View on Amazon</a>
+          </div>
         </div>
-    </footer>
+
+        <!-- Add more cards here... -->
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <p>As an Amazon Associate I earn from qualifying purchases.</p>
+    <p>© 2026 Cute Finds Store • All rights reserved • Made with 🌸</p>
+  </footer>
+
+  <script>
+    // Optional click tracking (keep your original function if needed)
+    function trackClick(item) {
+      console.log('Clicked:', item);
+      // gtag('event', 'affiliate_click', { 'item': item });
+    }
+  </script>
 
 </body>
 </html>
