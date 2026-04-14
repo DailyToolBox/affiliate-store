@@ -25,10 +25,13 @@
       --text: #4a2c3f;
       --card: #ffffff;
       --shadow: 0 8px 25px rgba(255, 158, 193, 0.15);
-      --transition: all 0.25s ease;
     }
 
-    * { margin:0; padding:0; box-sizing:border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
       font-family: 'Nunito', sans-serif;
@@ -49,7 +52,7 @@
     }
 
     .container {
-      max-width: 1200px;
+      max-width: 900px;
       margin: auto;
       padding: 2rem;
     }
@@ -61,19 +64,13 @@
       margin-bottom: 2rem;
     }
 
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-
     .product-card {
       background: var(--card);
       border-radius: 20px;
       box-shadow: var(--shadow);
       overflow: hidden;
-      transition: var(--transition);
       text-align: center;
+      transition: 0.3s ease;
     }
 
     .product-card:hover {
@@ -82,33 +79,57 @@
 
     .product-card img {
       width: 100%;
-      height: 250px;
+      height: 320px;
       object-fit: cover;
     }
 
     .product-info {
-      padding: 1.2rem;
+      padding: 1.5rem;
     }
 
     .product-info h3 {
       font-family: 'Comfortaa', cursive;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
     }
 
     .brand {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       color: #777;
       margin-bottom: 1rem;
+    }
+
+    .price {
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+    }
+
+    .price .current {
+      color: #ff4d88;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    .price del {
+      color: #999;
+      margin-left: 8px;
+    }
+
+    .price .discount {
+      color: green;
+      margin-left: 8px;
+      font-weight: 600;
     }
 
     .view-btn {
       display: inline-block;
       background: var(--primary);
       color: white;
-      padding: 0.8rem 1.6rem;
+      padding: 0.9rem 2rem;
       border-radius: 50px;
       text-decoration: none;
-      transition: var(--transition);
+      font-weight: 600;
+      transition: 0.3s ease;
     }
 
     .view-btn:hover {
@@ -136,30 +157,36 @@
 
   <h2 class="section-title">Featured Product</h2>
 
-  <div class="products">
+  <div class="product-card">
 
-    <!-- ONLY YOUR PRODUCT -->
-    <div class="product-card">
-      <img src="https://www.naheed.pk/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/j/u/junaid_jamshed_wasim_akram_502_women_eau_de_parfum_100ml.jpg" alt="Junaid Jamshed J. Wasim Akram 502 Women Eau de Parfum 100ml">
+    <img src="https://www.naheed.pk/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/j/u/junaid_jamshed_wasim_akram_502_women_eau_de_parfum_100ml.jpg"
+         alt="Wasim Akram 502 Women Perfume">
 
-      <div class="product-info">
-        <h3>Junaid Jamshed J. Wasim Akram 502 Women Eau de Parfum, 100ml</h3>
-        <div class="brand">Naheed.pk</div>
+    <div class="product-info">
 
-        <a href="https://www.naheed.pk/junaid-jamshed-j-wasim-akram-502-women-eau-de-parfum-100ml?acc=837cce5b58a171143f528c7d772488c7"
-           class="view-btn"
-           onclick="trackClick('wasim-akram-502-perfume')">
-           View on Store
-        </a>
+      <h3>Junaid Jamshed J. Wasim Akram 502 Women Eau de Parfum, 100ml</h3>
+
+      <div class="brand">Naheed.pk</div>
+
+      <div class="price">
+        <span class="current">Rs. 6,080</span>
+        <del>Rs. 6,400</del>
+        <span class="discount">5% OFF</span>
       </div>
-    </div>
 
+      <a href="https://www.naheed.pk/junaid-jamshed-j-wasim-akram-502-women-eau-de-parfum-100ml?acc=837cce5b58a171143f528c7d772488c7"
+         class="view-btn"
+         onclick="trackClick('wasim-akram-502-perfume')">
+         View on Store
+      </a>
+
+    </div>
   </div>
+
 </div>
 
 <footer>
   <p><strong>Affiliate Disclosure:</strong> This site contains affiliate links. We may earn a commission at no extra cost to you.</p>
-  <p>We only recommend products we find interesting.</p>
   <p>© 2026 Your Daily Finds</p>
 </footer>
 
