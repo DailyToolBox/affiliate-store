@@ -179,13 +179,13 @@
   <h2 class="section-title">Browse Categories</h2>
 
   <div style="text-align:center; margin-bottom:2rem;">
+    <button class="cat-btn active" onclick="showCategory('Lifestyle')" target="_blank">Home, Lifestyle & Kids</button>
+    <button class="cat-btn" onclick="showCategory('Appliances')" target="_blank">TV & Home Appliances</button>
     <button class="cat-btn" onclick="showCategory('5.5_eid_sale')" target="_blank">5.5 Eid Sale</button>
-    <button class="cat-btn" onclick="showCategory('Lifestyle')" target="_blank">Home, Lifestyle & Kids</button>
-    <button class="cat-btn active" onclick="showCategory('Appliances')" target="_blank">TV & Home Appliances</button>
   </div>
 
   <!-- ===================== Appliances CATEGORY (YOUR ORIGINAL CODE KEPT 100%) ===================== -->
-  <div id="Appliances" class="category">
+  <div id="Appliances" class="category" style="display:none;">
 
   <h2 class="section-title">TV & Home Appliances</h2>
 
@@ -356,9 +356,36 @@
 
   </div>
 
-  <div id="Lifestyle" class="category" style="display:none;">
+  <div id="Lifestyle" class="category">
 
     <h2 class="section-title">Home, Lifestyle & Kids</h2>
+
+    <div class="product-card">
+
+      <img src="images/soap_holder_daraz_pk.png" alt="Soap Holder">
+
+      <div class="product-info">
+
+        <h3>Double Layers Soap Holder 🧼✨</h3>
+
+        <div class="brand">Daraz.pk</div>
+
+        <div class="price">
+          <span class="current">Rs. 199</span>
+          <del>Rs. 499</del>
+          <span class="discount">60% OFF</span>
+        </div>
+
+        <a href="https://s.daraz.pk/s.cgRfb"
+           class="view-btn"
+           onclick="trackClick('soap_holder')"
+           target="_blank">
+           View on Daraz.pk
+        </a>
+
+      </div>
+
+    </div>
 
     <div class="product-card">
 
