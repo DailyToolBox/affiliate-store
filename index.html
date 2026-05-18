@@ -179,9 +179,10 @@
   <h2 class="section-title">Browse Categories</h2>
 
   <div style="text-align:center; margin-bottom:2rem;">
+    <button class="cat-btn active" onclick="showCategory('5.5_eid_sale')" target="_blank">5.5 Eid Sale</button>
+    <button class="cat-btn" onclick="showCategory('health_beauty')" target="_blank">Health & Beauty</button>
     <button class="cat-btn" onclick="showCategory('Lifestyle')" target="_blank">Home, Lifestyle & Kids</button>
     <button class="cat-btn" onclick="showCategory('Appliances')" target="_blank">TV & Home Appliances</button>
-    <button class="cat-btn active" onclick="showCategory('5.5_eid_sale')" target="_blank">5.5 Eid Sale</button>
   </div>
 
   <!-- ===================== Appliances CATEGORY (YOUR ORIGINAL CODE KEPT 100%) ===================== -->
@@ -719,6 +720,39 @@
 
   </div>
 
+  <!-- ===================== Health & Beauty Category (ADDED) ===================== -->
+  <div id="health_beauty" class="category" style="display:none;">
+
+    <h2 class="section-title">Health & Beauty</h2>
+
+    <div class="product-card">
+
+      <img src="images/ice_roller_daraz_pk.png" alt="Ice Roller">
+
+      <div class="product-info">
+
+        <h3>❄️ Silicone Ice Roller Massager for Face ✨</h3>
+
+        <div class="brand">Daraz.pk</div>
+
+        <div class="price">
+          <span class="current">Rs. 190</span>
+          <del>Rs. 250</del>
+          <span class="discount">24% OFF</span>
+        </div>
+
+        <a href="https://s.daraz.pk/s.c7JSI"
+           class="view-btn"
+           onclick="trackClick('ice_roller')"
+           target="_blank">
+           View on Daraz.pk
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
 </div>
 
 <footer>
