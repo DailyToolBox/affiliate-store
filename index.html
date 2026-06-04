@@ -179,10 +179,10 @@
   <h2 class="section-title">Browse Categories</h2>
 
   <div style="text-align:center; margin-bottom:2rem;">
-    <button class="cat-btn active" onclick="showCategory('5.5_eid_sale')" target="_blank">5.5 Eid Sale</button>
-    <button class="cat-btn" onclick="showCategory('health_beauty')" target="_blank">Health & Beauty</button>
+    <button class="cat-btn active" onclick="showCategory('health_beauty')" target="_blank">Health & Beauty</button>
     <button class="cat-btn" onclick="showCategory('Lifestyle')" target="_blank">Home, Lifestyle & Kids</button>
     <button class="cat-btn" onclick="showCategory('Appliances')" target="_blank">TV & Home Appliances</button>
+    <button class="cat-btn" onclick="showCategory('5.5_eid_sale')" target="_blank">5.5 Eid Sale</button>
   </div>
 
   <!-- ===================== Appliances CATEGORY (YOUR ORIGINAL CODE KEPT 100%) ===================== -->
@@ -688,7 +688,7 @@
   </div>
 
   <!-- ===================== DARAZ 5.5 EID SALE CATEGORY (ADDED) ===================== -->
-  <div id="5.5_eid_sale" class="category">
+  <div id="5.5_eid_sale" class="category" style="display:none;">
 
     <h2 class="section-title">5.5 Eid Sale</h2>
 
@@ -724,6 +724,33 @@
   <div id="health_beauty" class="category" style="display:none;">
 
     <h2 class="section-title">Health & Beauty</h2>
+
+    <div class="product-card">
+
+      <img src="images/contact_lens_daraz_pk.png" alt="Contact Lens">
+
+      <div class="product-info">
+
+        <h3>👁️ Soft Color Contact Lenses ✨</h3>
+
+        <div class="brand">Daraz.pk</div>
+
+        <div class="price">
+          <span class="current">Rs. 218</span>
+          <del>Rs. 400</del>
+          <span class="discount">46% OFF</span>
+        </div>
+
+        <a href="https://s.daraz.pk/s.cNYPP?cc"
+           class="view-btn"
+           onclick="trackClick('contact_lens')"
+           target="_blank">
+           View on Daraz.pk
+        </a>
+
+      </div>
+
+    </div>
 
     <div class="product-card">
 
