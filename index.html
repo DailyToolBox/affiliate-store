@@ -179,10 +179,10 @@
   <h2 class="section-title">Browse Categories</h2>
 
   <div style="text-align:center; margin-bottom:2rem;">
-    <button class="cat-btn active" onclick="showCategory('health_beauty')" target="_blank">Health & Beauty</button>
+    <button class="cat-btn" onclick="showCategory('health_beauty')" target="_blank">Health & Beauty</button>
     <button class="cat-btn" onclick="showCategory('Lifestyle')" target="_blank">Home, Lifestyle & Kids</button>
     <button class="cat-btn" onclick="showCategory('Appliances')" target="_blank">TV & Home Appliances</button>
-    <button class="cat-btn" onclick="showCategory('5.5_eid_sale')" target="_blank">5.5 Eid Sale</button>
+    <button class="cat-btn active" onclick="showCategory('6.6_mid_year_sale')" target="_blank">6.6 Mid Year Sale</button>
   </div>
 
   <!-- ===================== Appliances CATEGORY (YOUR ORIGINAL CODE KEPT 100%) ===================== -->
@@ -688,28 +688,30 @@
   </div>
 
   <!-- ===================== DARAZ 5.5 EID SALE CATEGORY (ADDED) ===================== -->
-  <div id="5.5_eid_sale" class="category" style="display:none;">
+  <div id="6.6_mid_year_sale" class="category">
 
-    <h2 class="section-title">5.5 Eid Sale</h2>
+    <h2 class="section-title">6.6 Mid Year Sale</h2>
 
     <div class="product-card">
 
-      <img src="images/5.5_eid_sale_daraz_pk.png" alt="5.5 Eid Sale">
+      <img src="images/6.6_mid_year_sale_daraz_pk.png" alt="6.6 Mid Year Sale">
 
       <div class="product-info">
 
-        <h3>5.5 Eid Sale</h3>
+        <h3>6.6 Mid Year Sale</h3>
 
         <div class="brand">Daraz.pk</div>
 
         <div class="price">
           <span class="current">Mega Deals</span>
           <span class="discount">UPTO 80% OFF</span>
+          <span class="current">Hot Deals</span>
+          <span class="discount">UPTO 75% OFF</span>
         </div>
 
-        <a href="https://s.daraz.pk/s.cSE2N"
+        <a href="https://s.daraz.pk/s.cMS0r?cc"
            class="view-btn"
-           onclick="trackClick('5.5_eid_sale_daraz_pk')"
+           onclick="trackClick('6.6_mid_year_sale_daraz_pk')"
            target="_blank">
            View on Daraz.pk
         </a>
@@ -721,7 +723,7 @@
   </div>
 
   <!-- ===================== Health & Beauty Category (ADDED) ===================== -->
-  <div id="health_beauty" class="category">
+  <div id="health_beauty" class="category" style="display:none;">
 
     <h2 class="section-title">Health & Beauty</h2>
 
